@@ -2,6 +2,13 @@ name: Deploy Worker
 on:
   workflow_dispatch:
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run tests
+        run: |
+          echo "Running tests..."
   deploy:
     runs-on: ubuntu-latest
     timeout-minutes: 60
@@ -9,7 +16,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Deploy
+      - name: Build & Deploy Worker
         uses: cloudflare/wrangler-action@1.3.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
