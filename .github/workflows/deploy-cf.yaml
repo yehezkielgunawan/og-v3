@@ -16,6 +16,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
       - name: Build & Deploy Worker
         uses: cloudflare/wrangler-action@v3
         with:
