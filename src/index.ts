@@ -44,9 +44,8 @@ export default {
 					<h1 style="font-size: 60px; margin: 0; font-family: 'Bitter'; font-weight: bold; color: white">${title}</h1>
 					<h2 style="font-size: 36px; margin: 0; font-family: 'Bitter'; font-weight: 400; color: white">${subtitle}</h2>
 				</div>
-				<figure style="border-radius: 100%">
+				<figure>
 					<img
-						style="border-radius: 100%"
 						src=${baseImage}
 						alt="og-image"
 						width="256"
